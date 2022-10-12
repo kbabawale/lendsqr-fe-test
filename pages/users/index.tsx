@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { memo, useEffect, useState } from "react";
+import { Fragment, memo, useEffect, useState } from "react";
 import Header from "../../app/layout/Header";
 import Sidebar from "../../app/layout/Sidebar";
 import styles from "./index.module.scss";
@@ -10,6 +10,7 @@ import Table from "../../app/element/Table";
 import { TableColumn } from "../../app/model/table";
 import { getUsers, saveUsers } from "../../app/service/users.service";
 import { User } from "../../app/model/user";
+import Head from "next/head";
 
 interface StatBoxProps {
   icon: any;
@@ -55,53 +56,61 @@ const Users: NextPage = memo(() => {
   }, []);
 
   return (
-    <div
-      className={`${styles.mainbody} d-flex flex-column align-items-start w-100`}
-    >
-      <Header />
-      <div className={` d-flex align-items-start w-100`}>
-        <Sidebar />
-        <div
-          className={`p-5 flex-fill align-self-start d-flex flex-column align-items-start`}
-        >
-          <span className={`color-tertiary text-15 fw-500`}>Users</span>
+    <Fragment>
+      <Head>
+        <title>Users</title>
+      </Head>
+
+      <div
+        className={`${styles.mainbody} d-flex flex-column align-items-start w-100`}
+      >
+        <Header />
+        <div className={` d-flex align-items-start w-100`}>
+          <Sidebar />
           <div
-            className={`${styles.boxes} mt-3 d-flex align-items-center justify-content-between w-100`}
+            className={`p-5 flex-fill align-self-start d-flex flex-column align-items-start`}
           >
-            <StatBox
-              icon={totalUsers}
-              label="users"
-              value={numberFormatter(2453)}
-            />
-            <StatBox
-              icon={totalUsers}
-              label="active users"
-              value={numberFormatter(2453)}
-            />
-            <StatBox
-              icon={totalUsers}
-              label="users with loans"
-              value={numberFormatter(12453)}
-            />
-            <StatBox
-              icon={totalUsers}
-              label="users with savings"
-              value={numberFormatter(102453)}
-            />
-          </div>
-          <div className={`${styles.heightt} mt-5 w-100`}>
-            {users.length == 0 && (
-              <span className={`color-tertiary text-1 fw-500 text-capitalize`}>
-                Loading...
-              </span>
-            )}
-            {users && users.length > 0 && (
-              <Table pagination={false} rows={users} columns={columns} />
-            )}
+            <span className={`color-tertiary text-15 fw-500`}>Users</span>
+            <div
+              className={`${styles.boxes} mt-3 d-flex align-items-center justify-content-between w-100`}
+            >
+              <StatBox
+                icon={totalUsers}
+                label="users"
+                value={numberFormatter(2453)}
+              />
+              <StatBox
+                icon={totalUsers}
+                label="active users"
+                value={numberFormatter(2453)}
+              />
+              <StatBox
+                icon={totalUsers}
+                label="users with loans"
+                value={numberFormatter(12453)}
+              />
+              <StatBox
+                icon={totalUsers}
+                label="users with savings"
+                value={numberFormatter(102453)}
+              />
+            </div>
+            <div className={`${styles.heightt} mt-5 w-100`}>
+              {users.length == 0 && (
+                <span
+                  className={`color-tertiary text-1 fw-500 text-capitalize`}
+                >
+                  Loading...
+                </span>
+              )}
+              {users && users.length > 0 && (
+                <Table pagination={false} rows={users} columns={columns} />
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 });
 
