@@ -1,0 +1,125 @@
+.pagebody{
+  background: #e5e5e5;
+}
+.statbox{
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+.heightt{
+  max-height:600px;
+  height:600px;
+  overflow-y: scroll;
+}
+
+.redButton{
+  border:1px solid var(--error);
+  border-radius: .3rem;
+  padding:.5rem 1rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color:var(--error);
+  text-transform: uppercase;
+}
+.greenButton{
+  border:1px solid var(--primary);
+  border-radius: .3rem;
+  padding:.5rem 1rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color:var(--primary);
+  text-transform: uppercase;
+}
+.roundedImage{
+  background: rgba(33, 64, 125, 0.145);
+  border-radius: 50%;
+  width:90px;
+  height:90px;
+}
+.borderRight{
+  border-right: 1px solid #545f7d4e;
+}
+.underline{
+  border-bottom: 2px solid var(--primary);
+}
+.underline_2{
+  border-bottom: 1px solid #545f7d2a;
+}
+.section{
+  table{
+
+    tr{
+      &:first-child{
+        td{
+          width:20%;
+
+        }
+        td > span{
+          color:var(--secondary);
+          font-weight: 400;
+          font-size:12px;
+          text-transform: uppercase;
+        }
+      }
+      &:last-child{
+        td{
+          width:20%;
+
+        }
+        td > span{
+          color:var(--tertiary);
+          font-weight: 400;
+          font-size:16px;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width : 992px) {
+  .mainbody{
+    width:100% !important;
+  }
+  .boxes{
+    display: flex !important;
+    flex-direction: column;
+    .statbox{
+      width:100% !important;
+    }
+  }
+  .heightt{
+    width:76vw !important;
+  }
+  .column{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .column_center{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    .borderRight{
+      border:none !important;
+    }
+  }
+  .scroller{
+    width: 76vw !important;
+    overflow-x: scroll;
+  }
+  .statbox{
+    width: 76vw !important;
+    align-self: center !important;
+  }
+  .section{
+    width: 76vw !important;
+    overflow-x: scroll !important;
+    padding:0 2rem;
+
+    table{
+      width:1000px !important;
+      align-self: flex-start !important;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.input {
+  // margin: 0.5rem 0;
+  padding: 0.8rem 0.5rem;
+  // border: 0.1rem solid rgba(84, 95, 125, 0.15);
+  border: none;
+  outline: none;
+  flex:1;
+}
+.boundary{
+  border: 0.15rem solid rgba(84, 95, 125, 0.15);
+  border-radius: .4rem;
+  &:hover {
+    border: 0.15rem solid rgba(84, 95, 125, 0.543);
+  }
+}
+.error{
+  border: 0.1rem solid #800020 !important;
+}
+

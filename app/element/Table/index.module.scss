@@ -1,0 +1,121 @@
+.table{
+  thead{
+    width:100%;
+    tr{
+      display: flex;
+      th{
+        padding:1rem .5rem;
+        display: flex;
+        align-items: center;
+
+        &:first-child{
+          width: 20% !important;
+        }
+        &:nth-child(2){
+          width: 15% !important;
+        }
+        &:nth-child(3){
+          width: 20% !important;
+        }
+        &:nth-child(4){
+          width: 15% !important;
+        }
+        &:nth-child(5){
+          width: 15% !important;
+        }
+        &:nth-child(6){
+          width: 10% !important;
+        }
+        &:last-child{
+          width: 5% !important;
+        }
+      }
+    }
+  }
+  tbody{
+    width:100%;
+    tr{
+      display: flex;
+      border-bottom:1px solid #21407d40;
+      &:last-child{
+        border-bottom: none;
+      }
+      td{
+        padding:1.1rem .5rem;
+        display: flex;
+        align-items: center;
+        &:first-child{
+          width: 20% !important;
+        }
+        &:nth-child(2){
+          width: 15% !important;
+        }
+        &:nth-child(3){
+          width: 20% !important;
+        }
+        &:nth-child(4){
+          width: 15% !important;
+        }
+        &:nth-child(5){
+          width: 15% !important;
+        }
+        &:nth-child(6){
+          width: 10% !important;
+        }
+        &:last-child{
+          width: 5% !important;
+        }
+      }
+    }
+  }
+}
+.statbox{
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+.inactive{
+  background:rgba(84, 95, 125, 0.179);
+  border-radius: 1rem;
+  padding:.2rem .7rem;
+}
+.active{
+  background:rgb(57, 205, 98, 0.179);
+  border-radius: 1rem;
+  padding:.2rem .7rem;
+}
+.yellow{
+  background:rgba(233, 179, 0, 0.179);
+  border-radius: 1rem;
+  padding:.2rem .7rem;
+}
+.error{
+  background:#e4033b37;
+  border-radius: 1rem;
+  padding:.2rem .7rem;
+}
+
+.paginationFilter{
+  background: rgba(33, 63, 125, 0.1);
+  border-radius: 4px;
+}
+.options{
+  display: none;
+  right:7.5rem;
+  position:absolute;
+  width: 180px;
+  max-height: 120px;
+  // border: 1px solid red;
+  border: 1px solid rgba(84, 95, 125, 0.04);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width : 992px) {
+  .table{
+    width:2000px !important;
+    align-self: flex-start !important;
+  }
+}
