@@ -99,7 +99,7 @@ const SingleUser: NextPage = memo(() => {
                       className={`ms-3 ${styles.borderRight} ps-4 pe-5 py-3 d-flex flex-column`}
                     >
                       <span className={`color-secondary text-09 fw-500`}>
-                        User's Tier
+                        User&apos;s Tier
                       </span>
                       <div className={`mt-1 d-flex align-items-center`}>
                         <span>
