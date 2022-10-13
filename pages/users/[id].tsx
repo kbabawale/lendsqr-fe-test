@@ -391,5 +391,5 @@ const SingleUser: NextPage = memo(() => {
     </Fragment>
   );
 });
-
+SingleUser.displayName = "SingleUser";
 export default SingleUser;

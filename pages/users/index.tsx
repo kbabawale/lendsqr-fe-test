@@ -113,5 +113,5 @@ const Users: NextPage = memo(() => {
     </Fragment>
   );
 });
-
+Users.displayName = "Users";
 export default Users;

@@ -63,5 +63,5 @@ const Home: NextPage = memo(() => {
     </Fragment>
   );
 });
-
+Home.displayName = "Users";
 export default Home;

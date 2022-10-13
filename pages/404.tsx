@@ -14,5 +14,5 @@ const Custom404 = memo(() => {
     </div>
   );
 });
-
+Custom404.displayName = "Custom404";
 export default Custom404;
